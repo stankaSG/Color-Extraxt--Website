@@ -1,0 +1,143 @@
+/* Import font Cardo */
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+
+/* Navbar Style */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    background-color: transparent;
+    background: rgba(84, 154, 154, 0.3);
+    color: white;
+    padding: 0;
+    text-align: left;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding-left: 25px;
+    font-family: 'Cardo', serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #f4a261;
+}
+
+/* Body and background */
+html, body {
+    background-color: #99bdbd;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section with Video */
+.hero {
+
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-vid {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Form Section */
+main {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-decoration: none;
+    color: white;
+    font-family: 'Cardo', serif;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-decoration: none;
+    color: white;
+    font-family: 'Cardo', serif;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Footer Style */
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-family: 'Cardo', serif;
+    font-size: 14px;
+    text-align: left;
+    margin-top: auto;
+}
+
+
+/* Color Palette */
+.color-palette {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.palette-container {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cardo', serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading Indicator */
+#loading {
+    display: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}

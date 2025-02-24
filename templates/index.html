@@ -1,0 +1,63 @@
+{% include "header.html" %}
+<body>
+
+<!-- Hero Section with Video -->
+    <section class="hero">
+      <div>
+        <video autoplay muted loop id="hero-vid">
+          <source src="{{ url_for('static', filename='assets/hero.mp4') }}" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+
+  <main>
+      <section id="upload-img">
+    <h1>Upload an Image</h1>
+    <form id="upload-form" action="{{ url_for('upload_img') }}" method="POST" enctype="multipart/form-data">
+        <input class="btn btn-dark" type="file" name="image" accept="image/*" required />
+        <button type="submit" class="btn btn-dark">Upload Image</button>
+    </form>
+
+    <!-- Loading indicator -->
+    <p id="loading">Processing image, please wait...</p>
+
+    {% if img_path %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ img_path }}" alt="Uploaded Image" style="max-width: 50%;"/>
+      </section>
+    {% endif %}
+
+      {% if palette: %}
+      <section class="color-palette">
+        <h2>Extract Color Palette</h2>
+        <div class="palette-container">
+          {% for color in palette %}
+            <div class="color-box" style="background-color: {{ color }};">
+              {{ color }}
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+        </div>
+
+
+  </main>
+{% include "footer.html" %}
+
+<script>
+    document.getElementById('upload-form').addEventListener('submit', function() {
+        document.getElementById('loading').style.display = 'block';
+    });
+</script>
+{% if _anchor %}
+<script>
+    window.location.hash = "{{ _anchor }}";
+</script>
+{% endif %}
+
+
+</body>
+</html>
